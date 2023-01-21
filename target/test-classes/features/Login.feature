@@ -14,3 +14,4 @@ Feature: To Test Login Functionality
   Scenario: verify User cannot Login with invalid credentials
     When user enter the invalid credentials
     Then verify invalid login error message is displayed
+    And close browser

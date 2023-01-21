@@ -17,7 +17,6 @@ public class StepDefinition {
     }
 
 
-
     @When("User enter the valid credentials")
     public void user_enter_the_valid_credentials() {
         System.out.println("3");
@@ -77,11 +76,13 @@ public class StepDefinition {
     public void user_remove_item_from_the_cart() {
         System.out.println("12");
     }
+
     @Then("verify no item present in the cart")
     public void verify_no_item_present_in_the_cart() {
         System.out.println("13");
 
     }
+
     @When("user change quantity of the item")
     public void user_change_quantity_of_the_item() {
         System.out.println("14");
@@ -125,6 +126,13 @@ public class StepDefinition {
     @Then("verify invalid login error message is displayed")
     public void verifyInvalidLoginErrorMessageIsDisplayed() {
         System.out.println("21");
+    }
+
+    @Then("close browser")
+    public void close_browser() {
+        System.out.println("22");
+
+
     }
 }
 
