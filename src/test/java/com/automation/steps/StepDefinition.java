@@ -1,9 +1,12 @@
 package com.automation.steps;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+
+import java.util.List;
 
 public class StepDefinition {
     @Given("User open website")
@@ -133,6 +136,34 @@ public class StepDefinition {
         System.out.println("22");
 
 
+    }
+
+    @When("user enter username {string} password {string}")
+    public void user_enter_username_password(String username, String password) {
+
+        System.out.println("===============" + username);
+        System.out.println("============" + password);
+    }
+
+    @Then("verify dropdown options")
+    public void verify_dropdown_options(DataTable dt) {
+        List<String> categories = dt.asList();
+
+        for (String category : categories) {
+            System.out.println(category);
+        }
+    }
+
+    @Then("verify table data")
+    public void verify_table_data(List<List<String>> table) {
+        for (List<String> row : table) {
+            for (String item : row) {
+                System.out.print(item + " =|= ");
+            }
+            System.out.println();
+
+
+        }
     }
 }
 
